@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT2095 Assignment 2 Screenshots</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+        
+        .screenshot-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .screenshot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .screenshot-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .screenshot-info {
+            padding: 20px;
+        }
+        
+        .screenshot-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .screenshot-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .screenshot-type {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        .core-type {
+            background-color: #e74c3c;
+        }
+        
+        .hd-type {
+            background-color: #27ae60;
+        }
+
+        .warning-container {
+            background: linear-gradient(135deg, #ff6b6b, #ffa500);
+            border: 3px solid #e74c3c;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .warning-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .warning-icon {
+            font-size: 2em;
+            margin-right: 12px;
+            animation: pulse 2s infinite;
+        }
+        
+        .warning-title {
+            color: #fff;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin: 0;
+        }
+        
+        .warning-text {
+            color: #fff;
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            margin: 0;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .warning-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>FIT2095 Assignment 2 Screenshots Gallery</h1>
+        <p>Recipe and Inventory Management with MongoDB Database Integration</p>
+    </div>
+
+    <div class="warning-container">
+        <div class="warning-header">
+            <span class="warning-icon">⚠️</span>
+            <h3 class="warning-title">Important Notice for Students</h3>
+        </div>
+        <p class="warning-text">
+            The provided screenshots are <span class="highlight">for demonstration purposes only</span> and serve to illustrate the core and HD (High Distinction) task requirements. Please <strong>do not waste your valuable time</strong> attempting to recreate the exact visual appearance of these UI examples. Instead, we encourage you to <span class="highlight">unleash your creativity</span> and design a beautiful, intuitive user interface that reflects your own style and technical skills. Your <strong>primary focus should be on fulfilling the functional requirements</strong> outlined in the assignment specifications while creating an engaging and user-friendly experience.
+        </p>
+    </div>
+
+    <div class="gallery">
+        <!-- CT2: User Registration -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/A2-CT2-register.png?raw=true" 
+                 alt="User Registration" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">User Registration System</h3>
+                <p class="screenshot-description">
+                    Registration form with validation for email, password, fullname, role, and phone. Includes password complexity validation and role selection between chef and user.
+                </p>
+                <span class="screenshot-type core-type">Core Task 2</span>
+            </div>
+        </div>
+
+        <!-- CT3: User Login -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/A2-CT3-Login.png?raw=true" 
+                 alt="User Login" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">User Authentication System</h3>
+                <p class="screenshot-description">
+                    Secure login form with email and password validation, logout functionality, and proper error handling for invalid credentials and account not found scenarios.
+                </p>
+                <span class="screenshot-type core-type">Core Task 3</span>
+            </div>
+        </div>
+
+        <!-- CT4: Dashboard Admin -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/A2-CT4-Dashbaord-admin.png?raw=true" 
+                 alt="Dashboard Admin" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Enhanced Homepage - Admin Dashboard</h3>
+                <p class="screenshot-description">
+                    Dynamic admin dashboard displaying database statistics including user count, recipe count, and inventory items. Shows logged-in user information and provides logout functionality.
+                </p>
+                <span class="screenshot-type core-type">Core Task 4</span>
+            </div>
+        </div>
+
+        <!-- CT4: Dashboard Chef -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/A2-CT4-Dashbaord-chef.png?raw=true" 
+                 alt="Dashboard Chef" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Enhanced Homepage - Chef Dashboard</h3>
+                <p class="screenshot-description">
+                    Dynamic chef dashboard displaying role-specific information and database statistics. Shows logged-in chef information with personalized navigation and logout functionality.
+                </p>
+                <span class="screenshot-type core-type">Core Task 4</span>
+            </div>
+        </div>
+
+        <!-- HD1: Recipe Recommendations -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/A2-HD1-Recipe Recommendations.png?raw=true" 
+                 alt="Recipe Recommendations" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Smart Recipe Recommendation System</h3>
+                <p class="screenshot-description">
+                    Advanced MongoDB aggregation pipeline that matches recipe ingredients with available inventory items, calculating cookability scores and providing intelligent recipe suggestions.
+                </p>
+                <span class="screenshot-type hd-type">High Distinction 1</span>
+            </div>
+        </div>
+
+        <!-- HD3: Advanced Recipe Analytics -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/A2-HD3-Advanced Recipe Analytics .png?raw=true" 
+                 alt="Advanced Recipe Analytics" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Advanced Recipe Analytics and Reporting</h3>
+                <p class="screenshot-description">
+                    Analytics dashboard using MongoDB aggregation to analyze recipe data, generate detailed reports, and provide advanced filtering and recommendation systems with performance metrics.
+                </p>
+                <span class="screenshot-type hd-type">High Distinction 3</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
