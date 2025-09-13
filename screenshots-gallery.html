@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT2095 Project Screenshots</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+        
+        .screenshot-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .screenshot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .screenshot-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .screenshot-info {
+            padding: 20px;
+        }
+        
+        .screenshot-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .screenshot-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .screenshot-type {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        .ct-type {
+            background-color: #e74c3c;
+        }
+        
+        .hd-type {
+            background-color: #27ae60;
+        }
+
+
+          .warning-container {
+            background: linear-gradient(135deg, #ff6b6b, #ffa500);
+            border: 3px solid #e74c3c;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .warning-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .warning-icon {
+            font-size: 2em;
+            margin-right: 12px;
+            animation: pulse 2s infinite;
+        }
+        
+        .warning-title {
+            color: #fff;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin: 0;
+        }
+        
+        .warning-text {
+            color: #fff;
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            margin: 0;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .warning-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>FIT2095 Project Screenshots Gallery</h1>
+        <p>A comprehensive view of the Recipe Management System features and functionality</p>
+    </div>
+
+    <div class="warning-container">
+        <div class="warning-header">
+            <span class="warning-icon">⚠️</span>
+            <h3 class="warning-title">Important Notice for Students</h3>
+        </div>
+        <p class="warning-text">
+            The provided screenshots are <span class="highlight">for demonstration purposes only</span> and serve to illustrate the core and HD (High Distinction) task requirements. Please <strong>do not waste your valuable time</strong> attempting to recreate the exact visual appearance of these UI examples. Some additional features shown in the screenshots may not be included in the official specifications. Instead, we encourage you to <span class="highlight">unleash your creativity</span> and design a beautiful, intuitive user interface that reflects your own style and technical skills. Your <strong>primary focus should be on fulfilling the functional requirements</strong> outlined in the assignment specifications while creating an engaging and user-friendly experience.
+        </p>
+    </div>
+
+    <div class="gallery">
+        <!-- CT4 Homepage -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/ct4-homepage.png?raw=true" 
+                 alt="CT4 Homepage" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Homepage</h3>
+                <p class="screenshot-description">
+                    The main landing page of the Recipe Management System. Features a clean, user-friendly interface 
+                    with navigation to all major sections including recipe management, inventory tracking, and search functionality.
+                </p>
+                <span class="screenshot-type ct-type">Core Task 4</span>
+            </div>
+        </div>
+
+        <!-- CT5 Add Recipe -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/ct5-add-recipe.png?raw=true" 
+                 alt="CT5 Add Recipe" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Add Recipe Form</h3>
+                <p class="screenshot-description">
+                    Recipe creation interface allowing users to input recipe details including name, ingredients, 
+                    cooking instructions, and nutritional information. Features form validation and user-friendly input fields.
+                </p>
+                <span class="screenshot-type ct-type">Core Task 5</span>
+            </div>
+        </div>
+
+        <!-- CT6 List Recipes -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/ct6-list-recipes.png?raw=true" 
+                 alt="CT6 List Recipes" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Recipe List View</h3>
+                <p class="screenshot-description">
+                    Comprehensive recipe listing page displaying all stored recipes in an organized format. 
+                    Includes recipe thumbnails, basic information, and quick action buttons for editing or viewing details.
+                </p>
+                <span class="screenshot-type ct-type">Core Task 6</span>
+            </div>
+        </div>
+
+        <!-- CT7 Delete Recipe -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/CT7-DeleteRecipe.png?raw=true" 
+                 alt="CT7 Delete Recipe" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Delete Recipe Confirmation</h3>
+                <p class="screenshot-description">
+                    Recipe deletion interface with confirmation dialog to prevent accidental deletions. 
+                    Shows recipe details before deletion and provides clear confirmation options for user safety.
+                </p>
+                <span class="screenshot-type ct-type">Core Task 7</span>
+            </div>
+        </div>
+
+        <!-- HD1 Filter Recipes -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/HD1-FilterRecipes.png?raw=true" 
+                 alt="HD1 Filter Recipes" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Recipe Filtering System</h3>
+                <p class="screenshot-description">
+                    Advanced filtering functionality allowing users to narrow down recipes based on various criteria 
+                    such as ingredients, cooking time, difficulty level, and dietary restrictions.
+                </p>
+                <span class="screenshot-type hd-type">High Distinction 1</span>
+            </div>
+        </div>
+
+        <!-- HD2 Search Recipes -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/HD2-SearchRecipes.png?raw=true" 
+                 alt="HD2 Search Recipes" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Recipe Search Feature</h3>
+                <p class="screenshot-description">
+                    Powerful search functionality enabling users to find recipes quickly using keywords, ingredients, 
+                    or recipe names. Features real-time search suggestions and advanced search options.
+                </p>
+                <span class="screenshot-type hd-type">High Distinction 2</span>
+            </div>
+        </div>
+
+        <!-- HD3 Smart Inventory Alerts -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/HD3-SmartInventoryAlerts.png?raw=true" 
+                 alt="HD3 Smart Inventory Alerts" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Smart Inventory Alerts</h3>
+                <p class="screenshot-description">
+                    Intelligent notification system that alerts users about low inventory levels, expiring ingredients, 
+                    and suggests recipes based on available ingredients to minimize food waste.
+                </p>
+                <span class="screenshot-type hd-type">High Distinction 3</span>
+            </div>
+        </div>
+
+        <!-- HD5 Recipe-Inventory Integration -->
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/HD5-Recipe-InventoryIntegration.png?raw=true" 
+                 alt="HD5 Recipe-Inventory Integration" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Recipe-Inventory Integration</h3>
+                <p class="screenshot-description">
+                    Seamless integration between recipe management and inventory tracking. Automatically updates 
+                    ingredient quantities when recipes are prepared and provides real-time availability status.
+                </p>
+                <span class="screenshot-type hd-type">High Distinction 5</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
