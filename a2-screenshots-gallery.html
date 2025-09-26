@@ -80,60 +80,85 @@
             background-color: #27ae60;
         }
 
-        .warning-container {
-            background: linear-gradient(135deg, #ff6b6b, #ffa500);
-            border: 3px solid #e74c3c;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+        .notice-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: 2px solid #5a67d8;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(90, 103, 216, 0.3);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            overflow: hidden;
         }
         
-        .warning-header {
+        .notice-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .notice-header {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 2;
         }
         
-        .warning-icon {
-            font-size: 2em;
-            margin-right: 12px;
-            animation: pulse 2s infinite;
+        .notice-icon {
+            font-size: 2.2em;
+            margin-right: 15px;
+            animation: bounce 3s ease-in-out infinite;
         }
         
-        .warning-title {
+        .notice-title {
             color: #fff;
-            font-size: 1.4em;
+            font-size: 1.5em;
             font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
             margin: 0;
+            letter-spacing: 0.5px;
         }
         
-        .warning-text {
+        .notice-text {
             color: #fff;
-            font-size: 1.1em;
-            line-height: 1.6;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-size: 1.15em;
+            line-height: 1.7;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
             margin: 0;
+            position: relative;
+            z-index: 2;
         }
         
         .highlight {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 2px 6px;
-            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.25);
+            padding: 3px 8px;
+            border-radius: 6px;
             font-weight: bold;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
         
-        .warning-container:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4);
-            transition: all 0.3s ease;
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-45%, -55%) rotate(180deg); }
+        }
+        
+        .notice-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(90, 103, 216, 0.4);
+            transition: all 0.4s ease;
         }
     </style>
 </head>
@@ -143,13 +168,13 @@
         <p>Recipe and Inventory Management with MongoDB Database Integration</p>
     </div>
 
-    <div class="warning-container">
-        <div class="warning-header">
-            <span class="warning-icon">⚠️</span>
-            <h3 class="warning-title">Important Notice for Students</h3>
+    <div class="notice-container">
+        <div class="notice-header">
+            <span class="notice-icon">💡</span>
+            <h3 class="notice-title">Important Notice for Students</h3>
         </div>
-        <p class="warning-text">
-            The provided screenshots are <span class="highlight">for demonstration purposes only</span> and serve to illustrate the core and HD (High Distinction) task requirements. Please <strong>do not waste your valuable time</strong> attempting to recreate the exact visual appearance of these UI examples. Instead, we encourage you to <span class="highlight">unleash your creativity</span> and design a beautiful, intuitive user interface that reflects your own style and technical skills. Your <strong>primary focus should be on fulfilling the functional requirements</strong> outlined in the assignment specifications while creating an engaging and user-friendly experience.
+        <p class="notice-text">
+            The provided screenshots demonstrate <span class="highlight">some of the tasks</span> and are included <span class="highlight">for demonstration purposes only</span>. These examples illustrate possible implementations of selected Assignment 2 requirements. Please <strong>do not attempt to replicate the exact visual design</strong> shown in these screenshots. Instead, focus on <span class="highlight">implementing the functional requirements</span> described in the assignment specifications while creating your own unique and creative user interface that demonstrates your technical skills and design capabilities.
         </p>
     </div>
 
@@ -218,6 +243,19 @@
                 <span class="screenshot-type hd-type">High Distinction 1</span>
             </div>
         </div>
+<!-- 
+        HD2: Role-Based Data Ownership
+        <div class="screenshot-card">
+            <img src="https://github.com/nawfalCode/fit2095-images/blob/main/HD2-Role-Based%20Data%20Ownership.png?raw=true" 
+                 alt="Role-Based Data Ownership" class="screenshot-img">
+            <div class="screenshot-info">
+                <h3 class="screenshot-title">Role-Based Data Ownership and Multi-User Management</h3>
+                <p class="screenshot-description">
+                    User-data relationships with role-specific access control where recipes are chef-only content and inventory is shared across all users. Personal chef dashboard showing "My Recipes" and shared inventory.
+                </p>
+                <span class="screenshot-type hd-type">High Distinction 2</span>
+            </div>
+        </div> -->
 
         <!-- HD3: Advanced Recipe Analytics -->
         <div class="screenshot-card">
